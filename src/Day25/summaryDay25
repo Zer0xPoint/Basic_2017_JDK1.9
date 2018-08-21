@@ -1,0 +1,53 @@
+Set
+无序 唯一
+底层依赖两个方法hashCode equals 保证了元素唯一性 自动生成即可
+首先比较哈斯值是否相同 相同则继续执行equals方法
+不用就将元素添加到set中
+
+TreeSet
+底层数据结构是红黑树
+保证元素的排序方式
+1 自然排序
+让元素所属的类实现Comparable接口
+2 比较器排序
+然集合构造方法结束后Comparator的实现类对象
+
+Collection
+    List 有序 可重复
+        ArrayList
+            数组 查询快 增删慢
+            线程不安全 效率高
+        Vector
+            数组 查询快 增删慢
+            线程安全 效率低
+        LinkedList
+            链表 查询慢 增删快
+            线程不安全 效率高
+    Set 无序 唯一
+        HashSet
+            依赖 HashCode equals 实现元素唯一
+            LinkedHashSet
+                链表 哈希表
+                链表保证有序
+                哈希保证唯一
+        TreeSet
+        红黑树
+        自然排序 比较器排序 根据返回值确定排序和是否添加
+
+唯一吗
+    是Set
+        排序吗
+        是TreeSet
+        否HashSet
+    否List
+        安全吗
+        是Vector
+        否ArrayList或LinkedList
+            查询多ArrayList //常用
+            增删多LinkedList
+
+集合中常见的数据结构
+Array 数组
+Linked 链表
+Hash 哈希表
+Tree 二叉树
